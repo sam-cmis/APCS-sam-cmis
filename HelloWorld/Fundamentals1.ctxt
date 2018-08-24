@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Fundamentals1
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ dataTypes()
+comment3.params=a\ b
+comment3.target=double\ add(double,\ double)
+comment4.params=a\ b
+comment4.target=double\ sub(double,\ double)
+comment5.params=a\ b
+comment5.target=double\ mul(double,\ double)
+comment6.params=a\ b
+comment6.target=double\ div(double,\ double)
+numComments=7
