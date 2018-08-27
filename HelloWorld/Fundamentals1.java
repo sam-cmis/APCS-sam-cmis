@@ -27,6 +27,7 @@ public class Fundamentals1
        System.out.format("Example data types: %n byte :%d%n short :%d%n int :%d%n long :%d%n float :%f%n double :%f%n boolean :%s%n char :%s", a,b,c,d,e,f,g,h);
     }
    
+   
    public static double add(double a, double b){
     double add = a + b;
     return add;
@@ -67,7 +68,9 @@ public class Fundamentals1
     return div;
     }
     
-   System.out.format("add :%d%n", );
-}
+   public static void math(){
+    System.out.println(add(69,74));
+    System.out.println(mul(69,74));
+    }
 
-    
+}
