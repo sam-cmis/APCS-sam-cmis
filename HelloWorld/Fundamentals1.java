@@ -5,6 +5,11 @@ public class Fundamentals1
     public static void main (String args[] ){
         dataTypes();
         
+    add(69,74);
+    mul(69,74);
+    
+    compare(10,15);
+    evenOddZero(5);
    }
    
    public static void dataTypes(){
@@ -24,7 +29,7 @@ public class Fundamentals1
        String n = "A double can store the length of 100000000 lightyears in cm, the known universe in cm, and 1 quintillion Jeff Bezo's net worth";
        String o = "A boolean can represent that every living thing will die eventually, life is suffering, and rocks are alive";
        String p = "A char can store the number of the price of keyboards, price of mouse, and coffee";
-       System.out.format("Example data types: %n byte :%d%n short :%d%n int :%d%n long :%d%n float :%f%n double :%f%n boolean :%s%n char :%s", a,b,c,d,e,f,g,h);
+       System.out.format("Example data types: %n byte :%d%n short :%d%n int :%d%n long :%d%n float :%f%n double :%f%n boolean :%s%n char :%s%n", a,b,c,d,e,f,g,h);
     }
    
    
@@ -72,5 +77,34 @@ public class Fundamentals1
     System.out.println(add(69,74));
     System.out.println(mul(69,74));
     }
-
+   
+   public static void compare(int a, int b){
+       if (a < b){
+       System.out.format("The value of a is %d and it is less than b whose value is %d%n", a,b);
+    } else if (a > b){
+       System.out.format("The value of a is %d and it is larger than b whose value is &d%n", a,b);
+    } else {
+       System.out.format("The value of a is %d and it is equal to b whose value is %d%n", a,b);
+    }
+     }
+   
+   public static void evenOddZero(int a){
+       if (a % 2 == 0) {
+           System.out.println(1);
+        }
+       
+       if (a % 2 != 0) {
+           System.out.println(-1);
+        }
+        
+       if (a == 0) {
+           System.out.println(0);
+        }
+    }
+   
+   public static void sqareTable(int a){
+       while (a <= 10){
+           
+        }
+    }
 }
