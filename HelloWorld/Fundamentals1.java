@@ -113,8 +113,9 @@ public class Fundamentals1
     }
     
    public static void triangle(int a){
-    for  (a = a; a >= 1; a--){
-      System.out.format("%d Triangled is",
+    System.out.format("%d Triangled is", a);
+       for  (a = a; a >= 1; a--){
+      System.out.format(" %d + ",a);
     }
    }
 }
