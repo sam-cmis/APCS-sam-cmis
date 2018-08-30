@@ -118,5 +118,45 @@ public class Fundamentals1
       System.out.format(" %d + ",a);
     }
    }
-}
+   
+   public static void pyramid(int a){
+    System.out.format("%d Pyramided is", a);
+       for  (a = a; a >= 1; a--){
+      System.out.format(" %d + ",a);
+    }
+   }
+   
+   public static void checkerboard() {
+
+        int length = a;
+        int height = b;
+
+        for (int i = 0; i <= height; i++)
+        {
+            if (i % 2 == 0)
+            {
+                System.out.print("* ");
+            }
+            else
+            {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= length; j++)
+            {
+                if (j % 2 == 0)
+                {
+                    System.out.print(" ");
+                }
+                else
+                {
+                    System.out.print("* ");
+                }
+            }
+            System.out.println("");
+        }
+    }
+  }
+    
+
+
 
