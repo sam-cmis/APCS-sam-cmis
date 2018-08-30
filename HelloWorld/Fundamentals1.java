@@ -112,51 +112,33 @@ public class Fundamentals1
         }
     }
     
-   public static void triangle(int a){
-    System.out.format("%d Triangled is", a);
+   public static int triangle(int a){
+    int b = 0; 
        for  (a = a; a >= 1; a--){
-      System.out.format(" %d + ",a);
+      b += a;
     }
+    return b;
    }
    
-   public static void pyramid(int a){
-    System.out.format("%d Pyramided is", a);
+   public static int pyramid(int a){
+    int b = 0;
        for  (a = a; a >= 1; a--){
-      System.out.format(" %d + ",a);
+      b += (a*a);
     }
+    return b;
    }
    
-   public static void checkerboard() {
-
-        int length = a;
-        int height = b;
-
-        for (int i = 0; i <= height; i++)
-        {
-            if (i % 2 == 0)
-            {
-                System.out.print("* ");
-            }
-            else
-            {
-                System.out.print(" ");
-            }
-            for (int j = 0; j <= length; j++)
-            {
-                if (j % 2 == 0)
-                {
-                    System.out.print(" ");
-                }
-                else
-                {
-                    System.out.print("* ");
-                }
-            }
-            System.out.println("");
+   public static String checkerboard(int w, int h) {
+   String output = "";
+    for (int a = 0; a < h; a++){
+        for (int b = 0; b < w; b++){
+            output += ","; 
         }
-    }
+        output += "\n";
+   }
+   return output;
   }
-    
+}
 
 
 
