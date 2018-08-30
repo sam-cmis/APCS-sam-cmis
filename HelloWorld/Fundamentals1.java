@@ -1,4 +1,4 @@
-
+import java.util.Random;
 
 public class Fundamentals1
 {
@@ -101,10 +101,21 @@ public class Fundamentals1
            System.out.println(0);
         }
     }
-   
-   public static void sqareTable(int a){
-       while (a <= 10){
-           
+  
+   public static void sqareTable(){
+       int a = 1;
+       int b = a * a;
+       for (a = 1; a <= 10; a++){
+        b = a * a;
+        int c = (int)(Math.random() * ((b - a)+1))+a;
+        System.out.format("%d\t%d\t%d\n", a,b,c);
         }
     }
+    
+   public static void triangle(int a){
+    for  (a = a; a >= 1; a--){
+      System.out.format("%d Triangled is",
+    }
+   }
 }
+

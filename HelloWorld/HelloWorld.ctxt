@@ -2,4 +2,6 @@
 comment0.target=HelloWorld
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment2.params=min\ max
+comment2.target=double\ getRandomDoubleBetweenRange(double,\ double)
+numComments=3
