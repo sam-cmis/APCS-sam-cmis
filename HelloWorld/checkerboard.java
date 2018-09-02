@@ -1,14 +1,15 @@
 import java.util.Scanner;
 public class checkerboard{
-  public static void main (String[] args){
-      Scanner Scan = new Scanner (System.in);
-      int in_1 = Scan.nextInt();
-      int in_2 = Scan.nextInt();
-      System.out.println(checkerboard(in_1, in_2));
-      
+    public static void main (String[] args){
+        Scanner Scan = new Scanner (System.in);
+        int in_1 = Scan.nextInt();
+        int in_2 = Scan.nextInt();
+        System.out.println(checkerboard(in_1, in_2));
+
     }
-      
+
     public static String checkerboard(int w, int h) {
+<<<<<<< HEAD
    String output = "";
    String mid = "";
    String mid2 = "";
@@ -44,9 +45,34 @@ public class checkerboard{
         }else if ( (b+a) % 2 == 1){
         output += " ";
         }
+=======
+        String output = "";
+        String mid1 = "";
+        String mid2 = "";
+        for (int a = 0; a <= h+1; a++){
+            if (a == 0){
+                for (int c = 0; c < w ; c++){
+                    mid1 += "-";
+                }
+                output += "+" + mid1 + "+";
+            }
+            else if (a == h +1){
+                for (int d = 0; d < w; d++){
+                  mid2 += "-";
+                }
+                output += "+" + mid2 + "+";
+            }
+            else if (a == 0){
+            
+            }
+            else{
+                for (int b = 0; b < w; b++){
+                    output += "."; 
+                }
+            }
+            output += "\n";
+        }
+        return output;
+>>>>>>> 61248343bfd30d17de66435d470a1ff2cf2b73f0
     }
-    output += "\n";
-   }
-   return output;
-  }
 }
