@@ -18,3 +18,32 @@ else{
                 }else if ( (b+a) % 2 == 1){
                     output += " ";
                 }
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                for (int lup = h; h>0; h--)
+            {
+             System.out.print("|");
+             for (int looptime = w; w > 0; w--)
+             {
+                System.out.print(".");
+                if (w==1){
+                 System.out.print("| \n");
+                }
+                }
+            }

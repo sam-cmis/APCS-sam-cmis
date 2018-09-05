@@ -1,7 +1,5 @@
 #BlueJ class context
 comment0.target=checkerboard
-comment1.params=args
-comment1.target=void\ main(java.lang.String[])
-comment2.params=w\ h
-comment2.target=java.lang.String\ checkerboard(int,\ int)
-numComments=3
+comment1.params=h\ w
+comment1.target=void\ checkerboard(int,\ int)
+numComments=2
