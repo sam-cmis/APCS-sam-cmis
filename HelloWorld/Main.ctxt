@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Main
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=no
+comment2.target=void\ convertToBinary(int)
+comment3.params=binary
+comment3.target=int\ convertToBinaryUsingString(java.lang.String)
+numComments=4
