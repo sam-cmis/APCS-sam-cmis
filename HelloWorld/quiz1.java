@@ -2,7 +2,7 @@ public class quiz1{
     public static void main(String args[]){
 
     }
-
+// 1 / 6
     public static void method1(int a, int b, int c){
         if ( a < b){
             if ( b < c){
@@ -16,11 +16,11 @@ public class quiz1{
             }
         }
     }
-
+// 1 / 6
     public static void method2(int a, int b){
         if 
     }
-
+//1
     public static void method3(int h, int w){
         String mid = "";
         String mid2 = "";
