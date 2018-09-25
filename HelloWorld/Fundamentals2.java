@@ -23,7 +23,6 @@ public class Fundamentals2{
                 System.out.print(arr[y]);
                 x += 1;
             }
-        
         }
     }
     
@@ -80,8 +79,25 @@ public class Fundamentals2{
     }
     
     public static int[] randomints(int n, int min, int max){
-        
-        
+        int [] array = new int[n];
+        for (int x = 0; x < n; x++){
+         int randomNum = (int)(Math.random() * (max)+min);
+         array[n] = randomNum;
+        }
+        return array;
+    }
+    
+    public static double[] randomDoubles(int n, double min, double max){
+        double [] array = new double[n];
+        for (int x = 0; x < n; x++){
+         double randomNum = (double)(Math.random() * (max)+min);
+         array[n] = randomNum;
+        }
+        return array;
+    }
+    
+    public static int[] copy(int[] array){
     
     }
+
 }
