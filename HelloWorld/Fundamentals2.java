@@ -151,7 +151,7 @@ public class Fundamentals2{
     public static int[] randomints(int n, int min, int max){
         int [] array = new int[n];
         for (int x = 0; x < n; x++){
-            int randomNum = (int)(Math.random() * (max)+min);
+            int randomNum = (int)(Math.random() * ((max)-min)+min);
             array[n] = randomNum;
         }
         return array;
@@ -160,7 +160,7 @@ public class Fundamentals2{
     public static double[] randomDoubles(int n, double min, double max){
         double [] array = new double[n];
         for (int x = 0; x < n; x++){
-            double randomNum = (double)(Math.random() * (max)+min);
+            double randomNum = (double)(Math.random() * ((max)-min)+min);
             array[n] = randomNum;
         }
         return array;
@@ -186,5 +186,23 @@ public class Fundamentals2{
         return friendship;
     }
 
-
-}
+    public static int[] pairs(int n){
+        int [] array = new int[n*2];
+        int x = 1;
+        int y = 0;
+        while (y < n*2){
+            array[y] = x * 2;
+            array [y + 1] = x *2;
+            x += 1;
+            y += 2;
+        
+        }
+        return array;
+        }
+    
+    public static int[] concat(int[] a, int[] b){
+        int x = a.length + b.length;
+        int [] array = new int [x];
+        int 
+    }
+    }
