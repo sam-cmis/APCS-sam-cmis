@@ -195,14 +195,27 @@ public class Fundamentals2{
             array [y + 1] = x *2;
             x += 1;
             y += 2;
-        
+
         }
         return array;
-        }
-    
+    }
+
     public static int[] concat(int[] a, int[] b){
-        int x = a.length + b.length;
+        int x = (a.length + b.length);
         int [] array = new int [x];
-        int 
+        int y = 0;
+        int z = 0;
+        while (y<((a.length + b.length))){
+            if (y < a.length){
+                array[y] = a[y];
+            }
+            else if (x>=a.length -1){
+                array[x] = b[z];
+                z+=1;
+            }
+            x+=1;
+            y+=1;
+        } 
+        return array; 
     }
-    }
+}
