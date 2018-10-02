@@ -218,4 +218,20 @@ public class Fundamentals2{
         } 
         return array; 
     }
+
+    public static int[] merge(int[] a, int[] b){
+        int [] array = new int [(a.length + b.length)];
+        int small = 0;
+        int larger = 0;
+        if (a.length <= b.length){
+            small = a.length;
+            larger = b.length;
+        }
+        else{
+            larger = a.length;
+            small = b.length;
+        }
+        for 
+        return array; 
+    }
 }
