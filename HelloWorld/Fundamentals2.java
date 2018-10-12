@@ -221,17 +221,51 @@ public class Fundamentals2{
 
     public static int[] merge(int[] a, int[] b){
         int [] array = new int [(a.length + b.length)];
-        int small = 0;
-        int larger = 0;
+        int y = 0;
+        int z = 0;
+        int x = 0;
         if (a.length <= b.length){
-            small = a.length;
-            larger = b.length;
+            int little = a.length;
+            int big = b.length;
+            int large [] = a;
+            int smaller [] = b;
         }
         else{
-            larger = a.length;
-            small = b.length;
+            int big = a.length;
+            int little = b.length;
+            int smaller [] = a;
+            int large [] = b;
         }
-        for 
+        while (x < array.length){
+            if (y>=a.length){
+                array [x] += b [z];
+                z += 1;
+                x+=1;
+            }
+            else if (z>=b.length){
+                array [x] += a [z];
+                z += 1;
+                x+=1;
+            }
+            else {
+                array [x] += a [z];
+                array [x+1] += b[z];
+                z+=1;
+                x+=2;
+            }
+            y +=1;
+        }
         return array; 
     }
+
+    public static void reverse(int[] array){
+        for(int i = 0; i < array.length / 2; i++)
+        {
+            int x = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = x;
+        }
+        printArray(array,false);
+    }
+
 }
