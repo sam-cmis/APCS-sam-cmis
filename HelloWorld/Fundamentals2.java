@@ -258,14 +258,27 @@ public class Fundamentals2{
         return array; 
     }
 
-    public static void reverse(int[] array){
+    public static int[]  reverse(int[] array){
         for(int i = 0; i < array.length / 2; i++)
         {
             int x = array[i];
             array[i] = array[array.length - i - 1];
             array[array.length - i - 1] = x;
         }
-        printArray(array,false);
+        return array;
     }
+    
+    public static int[] subArray(int[] array, int start, int stop){
+        int [] k = new int [start][stop];
+        for( int i = 0; i < array.length; i++){
+            int x = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = x;
+        }
+        return array;
+    }
+    
+    
 
+    
 }

@@ -4,12 +4,13 @@ public class Fundamentals3 {
     }
     public static int[][] defaultArray (int h, int w){
         int[][] array = new int[h][w];
+        int z = 0;
         for (int y = 0; y < array.length; y++){
             for (int x = 0; x < array[0].length; x++){
-                int v = array[y][x];
-                
-                System.out.print(v + ""); 
+                z++; 
+                System.out.print(z + " "); 
             }
+            System.out.println(); 
         }
         return array;
     }
