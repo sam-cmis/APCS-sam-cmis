@@ -1,4 +1,4 @@
-public class quiz2{
+public class FundamentalsIQuiz{
     public static void main(String args[])
     {
         System.out.println (method3(4, 3));
