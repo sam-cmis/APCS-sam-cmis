@@ -14,35 +14,39 @@ public class Fundamentals3 {
         int i = array[r][c];
         return i;
     }
-    
+
     public static double ifaequalschoiceloopit (double array[][], int r, int c){
         double i = array[r][c];
         return i;
     }
-    
+
     public static String ifaequalschoiceloopit (String array[][], int r, int c){
         String i = array[r][c];
         return i;
     }
-    
+
     public static void setValue(int[][] arr, int r, int c, int v){
         arr[r][c] = v;
     }
-    
+
     public static void setValue(double[][] arr, int r, int c, double v){
         arr[r][c] = v;
     }
-    
+
     public static void setValue(String[][] arr, int r, int c, String v){
         arr[r][c] = v;
     }
-    
+
     public static void print2DArray(int[][] array, boolean rowMajor){
+        int y = 0;
         if (rowMajor = true){
-           for (int x =0; x < array[0].length; x++){
-               System.out.println(array 
-            } 
+            while (y < array.length){
+                for (int x =0; x < array[0].length; x++){
+                    System.out.println(array[y][x]);
+                    y ++;
+                } 
+            }
         }
-        
+
     }
 }
