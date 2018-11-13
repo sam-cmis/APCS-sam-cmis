@@ -39,16 +39,37 @@ public class Fundamentals3 {
 
     public static void print2DArray(int[][] array, boolean rowMajor){
         int y = 0;
+        int z = 0;
         if (rowMajor == true){
             while (y < array.length){
                 for (int x =0; x < array[0].length; x++){
                     System.out.print(array[y][x] + " ");
-                    
+
                 } 
                 y++;
-                
+                System.out.print("\n"); 
             }
         }
 
+        else if (rowMajor == false)
+        {
+                while (z < array.length){
+                    for (int a =0; a < array[0].length; a++){
+                        System.out.print(array[a][z] + " ");
+                    }
+                    z++;
+                    System.out.print("\n");
+                }   
+            }
+        }
+    
+    public static void snakePrint(int[][] arr){
+        int y = 0;
+        int array[] = new int array[][];
+        for ( y = 0; y < array.length; y++){
+            
+        }
     }
-}
+
+    }
+
