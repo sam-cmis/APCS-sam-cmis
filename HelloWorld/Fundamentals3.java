@@ -79,7 +79,7 @@ public class Fundamentals3 {
     }
 
     public static String[][] locate(String[][] arr){
-        int y = (int)(Math.random() * (arr.length / arr[0].length));
+        int y = (int)(Math.random() * (arr.length));
         int x = (int)(Math.random() * (arr[0].length));
         int number = (int)(Math.random() * (10));
         String s = "" + number;
@@ -93,4 +93,48 @@ public class Fundamentals3 {
         return arr;
     }
 
+    public static int[][] replace(int[][] array, int threshold, int newValue){
+        for (int i = 0; i < array.length; i++){
+            for (int j = 0; j < array[0].length; j++){
+                if (array[i][j] > threshold){
+                    array [i][j] = newValue; 
+                }
+            }
+        }
+        return array; 
+    }
+
+    public static double[][] shift(double[][] arr, int row){
+        double [][] output = new double [arr.length][arr[0].length]; 
+        for (int b = 0; b < arr.length; b++){
+            if (b < row){
+                output[b] = arr[b]; 
+            }else if(b >= row && b != arr.length -1){
+                output[b+1] = arr[b]; 
+            }
+        }
+        for (int c = 0; c < arr[0].length; c++){
+            output[row][c] = Math.random() * 10; 
+        }
+        return output; 
+    }
+
+    public static double[][] tilt(double[][] arr){
+        double[][] output = new double [arr[0].length][arr.length]; 
+        for (int a = 0; a < arr.length; a++){
+            for (int b = 0; b < arr[0].length; b++){
+                output[b][a] = arr[a][b]; 
+            }
+        }
+        return output; 
+    }
+
+    public static int[][] greatestsum (int[][] arr){
+        for (int x = 0; x < arr.length; x++){
+            for (int y = 0; y < arr.length; y++){
+                if (x 
+            }
+        }
+        return array;
+    }
 }
