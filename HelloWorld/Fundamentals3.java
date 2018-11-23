@@ -130,11 +130,15 @@ public class Fundamentals3 {
     }
 
     public static int[][] greatestsum (int[][] arr){
-        for (int x = 0; x < arr.length; x++){
-            for (int y = 0; y < arr.length; y++){
-                if (x 
+        int x = 0;
+        int y = 0;
+        for (int w = 0; w < arr.length; w++){
+            for (int h = 0; h < arr[0].length; h++){
+                x += arr[w][
             }
         }
         return array;
     }
+    
+    
 }
