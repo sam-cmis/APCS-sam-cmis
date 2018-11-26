@@ -132,13 +132,22 @@ public class Fundamentals3 {
     public static int[][] greatestsum (int[][] arr){
         int x = 0;
         int y = 0;
-        for (int w = 0; w < arr.length; w++){
+        int r = 0;
+        int z = 0;
+        for (int s = 0; s < arr.length; s++){
             for (int h = 0; h < arr[0].length; h++){
-                x += arr[w][
+                x += arr[h][s];
+            }
+            for (int w = 0; w < arr.length; w++){
+                r += arr[s][y];
+            }
+            if (x < r){
+                
+            }
+            else if (r > x){
+                
             }
         }
         return array;
     }
-    
-    
 }
