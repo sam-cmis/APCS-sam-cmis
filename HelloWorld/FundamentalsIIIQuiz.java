@@ -1,4 +1,4 @@
-public class test{
+public class FundamentalsIIIQuiz{
     public static void main(String[] args){
         int[][] array1 = {{606, -11778, 14724, 19623},
                 {-9474, 12334, 2791, -13518},
@@ -21,20 +21,49 @@ public class test{
 
     }
 
-    
+    public static boolean allGreater(int[][] array, int threshold){
+        for (int i = 0; i < array.length; i++){
+            for (int j = 0; j < array[0].length; j++){
+                if (array[i][j] > threshold){
+                    System.out.print("true");
+                }
+                else
+                {
+                    System.out.print("false");
+                }
+            }
+        }
+        return array;
+    }
+
     public static int[][] invertSign(int[][] array, boolean positive){
         int w =0; 
         for (int x = 0; x < array.length; x++){
             for (int y = 0; y < array[0].length; y++){
-                if (w < 0){
-                    Math.abs(-w);
+                if (positive = false){
+                    if (w > 0){
+                        w = w * -1;
+                    }
                 }
-                else 
-                {
-                    w = w * -1;
+                if (positive = true){
+                    if (w < 0){
+                        Math.abs(-w);
+                    }
                 }
             }
         }    
         return array;
     }
-}
+
+    public static int[][] swapColumns(int[][] array, int c1,int c2){
+        int [][] output = new int [array.length][array[0].length]; 
+        for (int b = 0; b < array.length; b++){
+            if (b < c1){
+                output[b] = array[b]; 
+            }else if(b >= c1 && b != array.length -1){
+                output[b+1] = array[b]; 
+            }
+        }
+        return output; 
+        }
+    }
