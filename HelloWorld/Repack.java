@@ -6,23 +6,21 @@ public class Repack
         print(array);
         print(repack(array, 3));
     }
-        
+
     public static int[][] repack(int[][] array, int w){
-        int[][] repacked = new int[array.length][w];
-        for (int x = 0; x < array.length; x++){
-            for (int y = 0; y < array[0].length; y++){
-                if ( x > y){
-                    repacked[x][y] = array[x+1][y];
-                }
-                else {
-                    repacked[x][y] = array[y][x];
-                }
-            }
+        int arr = array.length * array[0].length;
+        int h = (arr / w) + (arr % w == 0 ? 0 : 1);
+
+        int[][] repacked = new int[h][w];
+        int y = 0, x = 0;
+        for(int a = 0; a < repacked.length; a++){
+            for(int b = 0; b < repacked[0].length; b++)
+            {}
         }
         return repacked;
     }
-    
-      public static int[][] getArray(int h, int w, boolean random){
+
+    public static int[][] getArray(int h, int w, boolean random){
         int[][] array = new int[h][w];
         int ct = 0;
         for(int y = 0; y < h; y++){
