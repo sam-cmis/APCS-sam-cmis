@@ -9,16 +9,15 @@ public class BubbleSort
 
     public static int[] sort(int[] array){
         boolean swap = true;
-        i = 0;
+        int i = 0;
         for (int x = 0; x < array.length; x++){
-            if (swap == true){
-                while (){
-
-                }
+            if (swap == false){
+                x++;
             }
             else  {
                 for (int y = 0; y < array.length; y++){
-
+                   //left becomes right and right becomes left
+                   y++  
                 }
             }
         }
@@ -43,8 +42,9 @@ public class BubbleSort
         String out = "{";
         for(int i = 0; i < array.length; i++){
             out += array[i];
-            if( i != array.length -1)
-                out+=", ";
+            if(i != array.length -1){
+                out +=", ";
+            }
         }
         out+= "}\n";
         System.out.println(out);
