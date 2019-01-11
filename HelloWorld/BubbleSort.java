@@ -9,19 +9,19 @@ public class BubbleSort
 
     public static int[] sort(int[] array){
         boolean swap = true;
-        int i = 0;
-        for (int x = 0; x < array.length; x++){
-            if (swap == false){
-                x++;
-            }
-            else  {
-                for (int y = 0; y < array.length; y++){
-                   //left becomes right and right becomes left
-                   y++  
+        int temp = 0;
+        while (swap != false){
+            swap = false;
+            for (int ex  = 0; ex < array.length-1; ex ++){
+                if (array[ex] > array[ex+1]){
+                    temp = array[ex];
+                    array[ex] = array[ex+1];
+                    array[ex+1] = temp;
+                    swap = true;
                 }
             }
         }
-        return array; 
+        return array;
     }
 
     public static int[] getArray(int w, boolean random){
