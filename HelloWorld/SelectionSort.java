@@ -18,18 +18,19 @@ public class SelectionSort
     }
 
     public static void sort(int[] array){
-        boolean swap = true;
-        int temp = 0;
-        for (int ex  = 0; ex < array.length-1; ex ++){
-            if (array[ex] > array[ex+1]){
-                temp = array[ex];
-                array[ex+1] = temp;
-            }  
+        for(int x = 0; x <array.length; x++)
+        {
+            int z = x;
+            for(int y =x; y < array.length; y++)
+            {
+                if(array[y] < array[z])
+                {
+                    z = y;
+                }
             }
-        for (int no = 0; no < array.length-1; no ++){
-            temp = no;
-            no = temp;
-            
+            int a = array[x];
+            array[x] = array[z];
+            array[z] = a;
         }
         }
     //move along the array and compare index with the number to the right
