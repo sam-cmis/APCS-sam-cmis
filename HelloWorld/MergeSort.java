@@ -19,16 +19,24 @@ public class MergeSort
 
     public static int sort(int[] array){
         int[] one = new int[array.length/2];
-        int[] second = new int[array.length/2];
+        int[] second = new int[array.length - array.length/2];
+        int frontarray = 0;
+        int backarray = 0;
+        int a = 0;
+        int b = 0;
+        
         for (int x = 0; x < array.length; x++){
             
         }
-        if (array.length == 1){
-            sort it;
+        for (int y = 1; y< array[0].length; y++){
+            
+        }
+        if (array.length == 2){
+            return array;
         }
         else {
-            return sort(one);
-        }
-      
+            return sort(//need);
+         
         }
     }
+}
