@@ -24,19 +24,37 @@ public class MergeSort
         int backarray = 0;
         int a = 0;
         int b = 0;
-        
         for (int x = 0; x < array.length; x++){
-            
+            one[x] = second[x];
         }
         for (int y = 1; y< array[0].length; y++){
-            
+            second[x] = one[a];
+            a++;
         }
-        if (array.length == 2){
+        if (array[one] < array[second]){
+
+            for(int x = 0; x <array.length; x++)
+            {
+                int z = x;
+                for(int y =x; y < array.length; y++)
+                {
+                    if(array[y] < array[z])
+                    {
+                        z = y;
+                    }
+                }
+                int a = array[x];
+                array[x] = array[z];
+                array[z] = a;
+            }
+        }
+
+        else if(array.length == 0 || 1){
             return array;
         }
         else {
-            return sort(//need);
-         
+            return sort(
+
         }
     }
 }
