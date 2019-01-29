@@ -17,53 +17,57 @@ public class MergeSort
         System.out.println();
     }
 
-    public static int sort(int[] array){
-        int[] one = new int[array.length/2];
-        int[] second = new int[array.length - array.length/2];
-        int a = 0;
-        int b = 0;
-        while (b < array.length){
-            if (one[a] < second[b]){
-                for (int x = 0; x < array[second].length; x++){
-                    one[x] = second[x];
-                    for (int y = 0; y< array[0].length; y++){
-                        second[x] = one[a];
-                        a++;
-                        if(array[y] < array[z])
-                        {
-                            z = y;
-                        }
-                        int a = array[x];
-                        array[x] = array[z];
-                        array[z] = a;
-                    }
-                }
-            }
-            else if (one ){
-                for (int x = 0; x < array[one].length; x++){
-                    second[x] = one[x];
-                    for (int y = 1; y< array[0].length; y++){
-                        one[a] = second[x];
-                        x++;
-                        if(array[z] < array[y])
-                        {
-                            y = z;
-                        }
-                        int b = array[y];
-                        array[y] = array[z];
-                        array[z] = b;
-                    }
-                }
-            }
-
-            else if (array.length == 0){
-                return 0;
-            }
-            else if(array.length == 1){
-                return array;
-            }
-            }
-        return array;
+    public static int[] sort(int[] array)
+    {
+        if(array.length == 1)
+        {
+            return array;
         }
-    //increment sides using the index that is being tracked.
+        else
+        {
+            int arr = array.length;
+            int[] x = new int [array.length/2];
+            int[] y = new int [array.length - x.length];
+            int b = 0;
+            for(b = 0; b < b; b++)
+            {
+                x[b] = array[b];
+            }
+            for(int c = 0; c < y.length; c++)
+            {
+                y[c] = array[b];
+                b++;
+            }
+            x = sort(x);
+            y = sort(y);
+            int[] z = new int [array.length];
+            int a = 0;
+            for (int d = 0; d < array.length; d++)
+            {
+                if(a == x.length)
+                {
+                    z[d] = y[b];
+                    b++;
+                }
+                else if (b == y.length)
+                {
+                    z[d] = x[a];
+                    a++;
+                }
+                else if(x[a] >= y[b])
+                {
+                    z[d] = y[b];
+                    b++;
+                }
+                else if(x[a] < y[b])
+                {
+                    z[d] = x[a];
+                    a++;
+                }
+            }
+            return z;
+        }
     }
+}
+
+
