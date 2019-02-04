@@ -13,32 +13,44 @@ public class tester2
         long mtotalTime = 0;
         long mtotalSteps = 0;
         int runs;
-        
+
         for(runs =0; runs < 10; runs++){
-            tmp = array;
             start = System.nanoTime();
             BubbleSort.sort(array);
             btime = System.nanoTime() - start;
             btotalTime += btime;
             btotalSteps += BubbleSort.steps;
-            
+            BubbleSort.steps = 0;
+
             array = tmp;
             start = System.nanoTime();
-            MergeSort.sort(array);
+            BubbleSort.sort(array);
             mtime = System.nanoTime() - start;
             mtotalTime += mtime;
-            mtotalSteps += MergeSort.steps;
-            MergeSort.steps = 0;
-            
+            mtotalSteps += BubbleSort.steps;
+            BubbleSort.steps = 0;
+
             array = Util.getArray(n, at);
-            
+
         }
         long bavgTime = (long)(totalTime/(double)runs);
         long bavgSteps = (long)(btotalSteps/(double)runs);
         System.out.println("BubbleSort Avg Runtime" + bavgTime);
+        System.out.println("BubbleSort Avg Steps" + bavgSteps);
+
+        for(runs =0; runs < 10; runs++){
+            start = System.nanoTime();
+            BubbleSort.sort(array);
+            btime = System.nanoTime() - start;
+            btotalTime += btime;
+            btotalSteps += BubbleSort.steps;
+            BubbleSort.steps = 0;
+        }
+        System.out.println("BubbleSort Avg Runtime" + bavgTime);
+        System.out.println("BubbleSort Avg Steps" + bavgSteps);
         
-        System.out.println(avgTime);
-        
+        System.out.println(bavgTime);
+
         start = System.nanoTime();
         BubbleSort.sort(array);
         btime = System.nanoTime() - start;
@@ -68,5 +80,5 @@ public class tester2
             "MergeSort: %d %d\n", 
             btime, BubbleSort.steps, stime, SelectionSort.steps,  itime, InsertionSort.steps, mtime, MergeSort.steps);
     }
-    }
+}
 
