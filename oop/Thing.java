@@ -15,6 +15,22 @@ public class Thing {
        this();
         this. field1 = field1value;
     }
+    
+    public Thing(double field2value){
+        this();
+        this. field2 = field2value;
+    }
+    
+    public Thing(boolean field3value){
+        this();
+        this. field3 = field3value;
+    }
+    
+    public Thing(String field4value){
+        this();
+        this. field4 = field4value;
+    }
+    
     public void setfield1(int newvalue){
         this.field1 = newvalue;
     }
