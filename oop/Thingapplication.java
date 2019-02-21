@@ -1,4 +1,4 @@
-public class thingapplication {
+public class Thingapplication {
     public static void main(String[] args){
         Thing thing1 = new Thing();
         Thing thing2 = new Thing();
