@@ -29,7 +29,7 @@ public class Deck
             cards c1 = cards.set(x);
             cards c2 = cards.get();
             cards.set(x,c1);
-            cards.get(y, );
+            cards.get(y,c );
         }
         //cards.set(object. index);
         //cards.get(index);
