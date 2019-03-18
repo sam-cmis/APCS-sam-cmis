@@ -1,16 +1,20 @@
 public class cardapplication
 {
     public static void main(String[] args){
-        Deck deck = new Deck(2);
-        for (int y = 0; y < Deck.nCards(); y++){
-            System.out.println(draw());
-        } 
-
-        for (int x = 0; x < card.size; x++){
-            for (int y = 0; y < card.size; y++){
-                Cards c1 = card
-            }
+        Game game = new Game();
+        game.addPlayer();
+        game.addPlayer();
+        game.addPlayer();
+        int round = 1;
+        while(game.playerfunds() > 0){
+            System.out.format("+----------+\n|Round %d");
+            game.setup();
+            game.playRound();
+            game.evaluate();
+            game.summary ();
+            
         }
+        
 
     }
 } 

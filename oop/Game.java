@@ -1,26 +1,34 @@
+import java.util. *;
 public class Game
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private Deck deck;
+    private List<Player> players;
+    private Player dealer;
+    private int x = 0;
+    public Game(){
+        deck = new Deck(5);
+        players = new ArrayList<Player>();
+        dealer = new Player("Dealer", 5000);
 
-    /**
-     * Constructor for objects of class Game
-     */
-    public Game()
-    {
-        // initialise instance variables
-        x = 0;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void addPlayer(){
+        Player newPlayer = new Player("Player"+players);
+        players.add(newPlayer);
+    }
+
+    public void summary(){
+        System.out.println("Summary\n=====");
+        System.out.println(dealer);
+        for(Player player: players){
+            System.out.println(player);
+        }
+    }
+
+    public void setup(){
+         = 
+        //dealer setup
+        //hand setup
+        //player setup
     }
 }
