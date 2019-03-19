@@ -9,14 +9,13 @@ public class Game
         deck = new Deck(5);
         players = new ArrayList<Player>();
         dealer = new Player("Dealer", 5000);
-
     }
-
+    
     public void addPlayer(){
         Player newPlayer = new Player("Player"+players);
         players.add(newPlayer);
     }
-
+    
     public void summary(){
         System.out.println("Summary\n=====");
         System.out.println(dealer);
@@ -24,9 +23,9 @@ public class Game
             System.out.println(player);
         }
     }
-
+    
     public void setup(){
-         = 
+        deck = 
         //dealer setup
         //hand setup
         //player setup

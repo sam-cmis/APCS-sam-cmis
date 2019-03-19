@@ -12,16 +12,16 @@ public class Deck
             }
         }
     }
-
+    
     public int nCards(){
         return cards.size();
     }
-
+    
     public Card draw(){
         int last = cards.size() -1;
         return cards.remove(last);
     }
-
+    
     public void shuffle(){
         for (int x = 0; x < cards.size; x++){
             int x = ((int)(Math.random() * cards.size));
@@ -31,6 +31,7 @@ public class Deck
             cards.set(x,c1);
             cards.get(y,c  );
         }
+        //preferences
         //cards.set(object. index);
         //cards.get(index);
     }
