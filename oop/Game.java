@@ -24,10 +24,4 @@ public class Game
         }
     }
     
-    public void setup(){
-        deck = 
-        //dealer setup
-        //hand setup
-        //player setup
-    }
 }

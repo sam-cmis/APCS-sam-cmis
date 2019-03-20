@@ -9,7 +9,7 @@ public class cardapplication
         while(game.playerfunds() > 0){
             System.out.format("+----------+\n|Round %d");
             game.setup();
-            game.playRound();
+            //game.playRound();
             game.evaluate();
             game.summary ();
             
