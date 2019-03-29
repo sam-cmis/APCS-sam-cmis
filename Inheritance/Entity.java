@@ -13,7 +13,13 @@ public class Entity{
         return name;
     }
     
+    public void setAge(int newAge){
+        if (newAge <= 150){
+            super.setAge(newAge);
+        }
+    }
+    
     public String toString(){
-        return String.format("%s:%s:%s", toString(), name, "Entity");
+        return String.format("%s:%s:%s", super.toString(), name, "Entity");
     }
 }

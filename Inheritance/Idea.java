@@ -1,6 +1,5 @@
 public class Idea extends Entity{
-    private String 
-    
+    private int popularity;
     
     public Idea(){
         super("default");
@@ -10,9 +9,18 @@ public class Idea extends Entity{
         super(name);
     }
     
+    public void setPopularity(int popularity){
+        this.popularity = popularity;
+    }
+    
+    public int getPopularity(){
+        return popularity;
+    }
+    
     public String toString(){
         String out = super.toString();
         out += "---> Idea";
+        out += "---> \nPopularity" + popularity + "\n";
         return out;
     }
 }
