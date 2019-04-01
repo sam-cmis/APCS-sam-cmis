@@ -15,22 +15,13 @@ public class EntityApplication{
         Idea i1 = new Idea("Idea1");
         i1.setPopularity(1);
         p(i1);
+        G8mer g1 = new G8mer("Gamer1");
+        g1.setScore(5.5);
+        p(g1);
+        Mall m1 = new Mall("Mall1");
+        m1.setVisitors(6974);
+        p(m1);
         
-        
-        Place place = new Place("Somalia");
-        Thing thing = new Thing("Scissors");
-        Idea idea = new Idea("Sloth");
-        
-        entities.add(person);
-        entities.add(place);
-        entities.add(thing);
-        entities.add(Idea);
-        
-        for (Entity e: entities){
-            p(e.getName());
-            p(e.getAge());
-            c
-        }
         
     }
     

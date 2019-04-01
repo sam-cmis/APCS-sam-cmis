@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Mall
+comment1.params=
+comment1.target=Mall()
+comment2.params=name
+comment2.target=Mall(java.lang.String)
+comment3.params=visitors
+comment3.target=void\ setVisitors(int)
+comment4.params=
+comment4.target=int\ getVisitors()
+comment5.params=loss
+comment5.target=void\ setLoss(double)
+comment6.params=
+comment6.target=double\ getLoss()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

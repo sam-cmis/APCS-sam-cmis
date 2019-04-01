@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=G8mer
+comment1.params=
+comment1.target=G8mer()
+comment2.params=name
+comment2.target=G8mer(java.lang.String)
+comment3.params=winrate
+comment3.target=void\ setScore(double)
+comment4.params=
+comment4.target=double\ getScore()
+comment5.params=wealth
+comment5.target=void\ setWealth(double)
+comment6.params=
+comment6.target=double\ getWealth()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8
