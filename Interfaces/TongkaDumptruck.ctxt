@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=TongkaDumptruck
+comment1.params=
+comment1.target=TongkaDumptruck()
+comment2.params=
+comment2.target=int\ speed()
+comment3.params=name
+comment3.target=void\ name(java.lang.String)
+comment4.params=
+comment4.target=int\ height()
+comment5.params=x\ y
+comment5.target=void\ destination(int,\ int)
+comment6.params=
+comment6.target=java.lang.String\ words()
+comment7.params=newTitle\ newNum
+comment7.target=void\ changeBook(java.lang.String,\ int)
+numComments=8
