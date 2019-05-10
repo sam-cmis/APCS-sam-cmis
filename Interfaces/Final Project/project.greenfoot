@@ -1,0 +1,16 @@
+#Greenfoot properties
+#Fri May 10 11:55:06 ICT 2019
+simulation.speed=63
+class.Character2.image=bluej-icon.png
+class.Character.image=bomb.png
+mainWindow.width=850
+project.charset=UTF-8
+version=3.0.0
+class.Character.superclass=greenfoot.Actor
+world.lastInstantiated=finalproject
+class.finalproject.image=sand2.jpg
+mainWindow.y=40
+class.Character2.superclass=greenfoot.Actor
+mainWindow.x=40
+class.finalproject.superclass=greenfoot.World
+mainWindow.height=600
