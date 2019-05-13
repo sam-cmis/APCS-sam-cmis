@@ -8,6 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Character extends Actor
 {
+    private final int GRAVITY = 1;
+    private int velocity;
+    public Character(){
+        velocity = 0;
+    }
     /**
      * Act - do whatever the Character wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -22,5 +27,16 @@ public class Character extends Actor
         if(Greenfoot.isKeyDown("a"))x--;
         if(Greenfoot.isKeyDown("d"))x++;
         setLocation(x, y);   
-                    }
-                }
+        
+        fall();
+        if (Greenfoot.isKeyDown("space"))jump();
+    }
+    public void fall(){
+        setLocation(getX(), getY() + velocity);
+        if (getY() > getWorld().getHeight() - 50)velocity = 0;
+        else velocity += GRAVITY;
+    }
+    public void jump(){
+        velocity = -20;
+    }
+}

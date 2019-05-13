@@ -1,16 +1,22 @@
 #Greenfoot properties
-#Fri May 10 11:55:06 ICT 2019
-simulation.speed=63
-class.Character2.image=bluej-icon.png
-class.Character.image=bomb.png
-mainWindow.width=850
+#Mon May 13 14:31:40 ICT 2019
 project.charset=UTF-8
-version=3.0.0
-class.Character.superclass=greenfoot.Actor
-world.lastInstantiated=finalproject
-class.finalproject.image=sand2.jpg
-mainWindow.y=40
-class.Character2.superclass=greenfoot.Actor
-mainWindow.x=40
 class.finalproject.superclass=greenfoot.World
+class.Character4.image=butterfly.png
 mainWindow.height=600
+class.Character3.superclass=greenfoot.Actor
+class.Character.superclass=greenfoot.Actor
+version=3.0.0
+class.Character4.superclass=greenfoot.Actor
+class.finalproject.image=space.jpg
+simulation.speed=45
+world.lastInstantiated=finalproject
+class.Character.image=frog.png
+class.Boss.image=hedgehog.png
+mainWindow.y=40
+mainWindow.x=40
+class.Character3.image=bee2.png
+class.Character2.image=bee.png
+mainWindow.width=850
+class.Character2.superclass=greenfoot.Actor
+class.Boss.superclass=greenfoot.Actor

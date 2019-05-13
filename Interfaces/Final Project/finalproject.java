@@ -31,5 +31,7 @@ public class finalproject extends World
         addObject(character,23,30);
         Character2 character2 = new Character2();
         addObject(character2,50,60);
+        Character3 character3 = new Character3();
+        addObject(character3, 50, 60);
     }
 }
