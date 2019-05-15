@@ -1,22 +1,22 @@
 #Greenfoot properties
-#Mon May 13 14:31:40 ICT 2019
+#Wed May 15 09:18:42 ICT 2019
 project.charset=UTF-8
-class.finalproject.superclass=greenfoot.World
-class.Character4.image=butterfly.png
 mainWindow.height=600
+class.Character4.image=220px-Retrato_de_Julio_C\u00E9sar_(26724093101).jpg
 class.Character3.superclass=greenfoot.Actor
 class.Character.superclass=greenfoot.Actor
 version=3.0.0
 class.Character4.superclass=greenfoot.Actor
-class.finalproject.image=space.jpg
-simulation.speed=45
-world.lastInstantiated=finalproject
-class.Character.image=frog.png
-class.Boss.image=hedgehog.png
+class.WorldHistory.superclass=greenfoot.World
+simulation.speed=55
+world.lastInstantiated=WorldHistory
+class.Character.image=c33aa76e55e8b3a978244238c18ce95c.jpg
+class.Boss.image=220px-Mao_Zedong_1963_(cropped).jpg
 mainWindow.y=40
 mainWindow.x=40
-class.Character3.image=bee2.png
-class.Character2.image=bee.png
+class.Character3.image=images.jpeg
+class.WorldHistory.image=board.jpg
+class.Character2.image=220px-Chandragupt_maurya_Birla_mandir_6_dec_2009_(31)_(cropped).JPG
 mainWindow.width=850
 class.Character2.superclass=greenfoot.Actor
 class.Boss.superclass=greenfoot.Actor

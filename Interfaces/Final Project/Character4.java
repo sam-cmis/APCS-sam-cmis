@@ -17,10 +17,10 @@ public class Character4 extends Actor
         // Add your action code here.
         int y = getY();
         int x = getX();
-        if(Greenfoot.isKeyDown("k"))y++;
-        if(Greenfoot.isKeyDown("i"))y--;
-        if(Greenfoot.isKeyDown("j"))x--;
-        if(Greenfoot.isKeyDown("l"))x++;
+        if(Greenfoot.isKeyDown("j"))y++;
+        if(Greenfoot.isKeyDown("u"))y--;
+        if(Greenfoot.isKeyDown("h"))x--;
+        if(Greenfoot.isKeyDown("k"))x++;
         setLocation(x, y); 
     }    
 }
