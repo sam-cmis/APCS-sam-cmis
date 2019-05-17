@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Character3 here.
+ * Write a description of class Character2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Character3 extends Actor
+public class Chandragupta extends Actor
 {
     /**
-     * Act - do whatever the Character3 wants to do. This method is called whenever
+     * Act - do whatever the Character2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -17,10 +17,10 @@ public class Character3 extends Actor
         // Add your action code here.
         int y = getY();
         int x = getX();
-        if(Greenfoot.isKeyDown("5"))y++;
-        if(Greenfoot.isKeyDown("8"))y--;
-        if(Greenfoot.isKeyDown("4"))x--;
-        if(Greenfoot.isKeyDown("6"))x++;
+        if(Greenfoot.isKeyDown("down"))y++;
+        if(Greenfoot.isKeyDown("up"))y--;
+        if(Greenfoot.isKeyDown("left"))x--;
+        if(Greenfoot.isKeyDown("right"))x++;
         setLocation(x, y); 
     }    
 }

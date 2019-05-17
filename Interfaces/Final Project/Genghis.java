@@ -6,12 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Character extends Actor
+public class Genghis extends Actor
 {
-    private final int GRAVITY = 1;
+    private final int GRAVITY = 5;
     private int velocity;
-    public Character(){
-        velocity = 0;
+    public Genghis(){
+        velocity = 2;
     }
     /**
      * Act - do whatever the Character wants to do. This method is called whenever
@@ -22,14 +22,12 @@ public class Character extends Actor
         // Add your action code here.
         int y = getY();
         int x = getX();
-        if(Greenfoot.isKeyDown("s"))y++;
-        if(Greenfoot.isKeyDown("w"))y--;
         if(Greenfoot.isKeyDown("a"))x--;
         if(Greenfoot.isKeyDown("d"))x++;
         setLocation(x, y);   
         
         fall();
-        if (Greenfoot.isKeyDown("space"))jump();
+        if (Greenfoot.isKeyDown("w"))jump();
     }
     public void fall(){
         setLocation(getX(), getY() + velocity);
@@ -37,6 +35,6 @@ public class Character extends Actor
         else velocity += GRAVITY;
     }
     public void jump(){
-        velocity = -20;
+        velocity = -10;
     }
 }

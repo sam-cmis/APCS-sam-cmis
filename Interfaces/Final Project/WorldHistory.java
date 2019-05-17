@@ -27,11 +27,13 @@ public class WorldHistory extends World
      */
     private void prepare()
     {
-        Character character = new Character();
-        addObject(character,23,30);
-        Character2 character2 = new Character2();
-        addObject(character2,50,60);
-        Character3 character3 = new Character3();
-        addObject(character3, 50, 60);
+        Chandragupta character2 = new Chandragupta();
+        addObject(character2,63,61);
+        Stalin character3 = new Stalin();
+        addObject(character3, 759, 51);
+        Julius character4 = new Julius();
+        addObject(character4,752,554);
+        Genghis genghis2 = new Genghis();
+        addObject(genghis2,52,555);
     }
 }
