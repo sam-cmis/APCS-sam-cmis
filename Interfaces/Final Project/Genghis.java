@@ -37,4 +37,5 @@ public class Genghis extends Actor
     public void jump(){
         velocity = -10;
     }
+    //if a key is pressed, shoot a projectile named horse
 }

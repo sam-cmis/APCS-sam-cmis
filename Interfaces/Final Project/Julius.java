@@ -23,4 +23,5 @@ public class Julius extends Actor
         if(Greenfoot.isKeyDown("k"))x++;
         setLocation(x, y); 
     }    
+    //if a key is pressed, shoot a projectile named veto
 }

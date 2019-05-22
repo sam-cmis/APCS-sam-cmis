@@ -23,4 +23,5 @@ public class Chandragupta extends Actor
         if(Greenfoot.isKeyDown("right"))x++;
         setLocation(x, y); 
     }    
+    //if a key is pressed, shoot a projectile named ashoka
 }

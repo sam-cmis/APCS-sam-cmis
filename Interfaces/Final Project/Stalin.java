@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class Character3 here.
  * 
@@ -23,4 +22,5 @@ public class Stalin extends Actor
         if(Greenfoot.isKeyDown("6"))x++;
         setLocation(x, y); 
     }    
+    //if a key is pressed, shoot a projectile named communism
 }

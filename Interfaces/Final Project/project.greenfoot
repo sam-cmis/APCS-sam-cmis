@@ -1,26 +1,30 @@
 #Greenfoot properties
-#Fri May 17 14:35:10 ICT 2019
+#Wed May 22 09:34:09 ICT 2019
 project.charset=UTF-8
 class.Julius.image=juli.png
-class.Genghis.image=genghis.png
 mainWindow.height=600
+class.Genghis.image=genghis.png
 version=3.0.0
+class.Deathmatch.superclass=greenfoot.World
+class.platform.image=brick.png
 class.Chandragupta.image=cg.png
-class.WorldHistory.superclass=greenfoot.World
 class.MongolEmpire.superclass=greenfoot.Actor
 simulation.speed=55
+world.lastInstantiated=Deathmatch
 class.Gupta.superclass=greenfoot.Actor
-world.lastInstantiated=WorldHistory
+class.SmashBrosWorldHistoryEdition.superclass=greenfoot.World
 class.Communist1.superclass=greenfoot.Actor
 class.Boss.image=220px-Mao_Zedong_1963_(cropped).jpg
 mainWindow.y=40
 mainWindow.x=40
 class.Genghis.superclass=greenfoot.Actor
-class.MongolEmpire.image=tent.png
 class.Julius.superclass=greenfoot.Actor
+class.MongolEmpire.image=tent.png
+class.Deathmatch.image=rAxpesr.jpg
 class.Stalin.image=staline.png
-class.WorldHistory.image=cell.jpg
+class.platform.superclass=greenfoot.Actor
 mainWindow.width=850
 class.Chandragupta.superclass=greenfoot.Actor
 class.Stalin.superclass=greenfoot.Actor
+class.SmashBrosWorldHistoryEdition.image=flat.jpg
 class.Boss.superclass=greenfoot.Actor
