@@ -10,4 +10,6 @@ comment3.params=
 comment3.target=void\ fall()
 comment4.params=
 comment4.target=void\ jump()
-numComments=5
+comment5.params=
+comment5.target=void\ move()
+numComments=6

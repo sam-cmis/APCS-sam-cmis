@@ -8,6 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class platform extends Actor
 {
+    public platform() {
+        this(100, 25);
+    }
+    public platform(int width, int height){
+        GreenfootImage image = getImage();
+        image.scale(width, height);
+        setImage(image);
+    }
     /**
      * Act - do whatever the platform wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

@@ -8,10 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Genghis extends Actor
 {
-    private final int GRAVITY = 5;
+    private final int GRAVITY = 1;
     private int velocity;
     public Genghis(){
-        velocity = 2;
+        velocity = 5;
     }
     /**
      * Act - do whatever the Character wants to do. This method is called whenever
@@ -20,14 +20,8 @@ public class Genghis extends Actor
     public void act() 
     {
         // Add your action code here.
-        int y = getY();
-        int x = getX();
-        if(Greenfoot.isKeyDown("a"))x--;
-        if(Greenfoot.isKeyDown("d"))x++;
-        setLocation(x, y);   
-        
         fall();
-        if (Greenfoot.isKeyDown("w"))jump();
+        if (Greenfoot.isKeyDown("w") && getY() > getWorld().getHeight() - 50)jump();
     }
     public void fall(){
         setLocation(getX(), getY() + velocity);
@@ -36,6 +30,13 @@ public class Genghis extends Actor
     }
     public void jump(){
         velocity = -10;
+    }
+    public void move(){
+        int y = getY();
+        int x = getX();
+        if(Greenfoot.isKeyDown("a"))x--;
+        if(Greenfoot.isKeyDown("d"))x++;
+        setLocation(x, y);   
     }
     //if a key is pressed, shoot a projectile named horse
 }
