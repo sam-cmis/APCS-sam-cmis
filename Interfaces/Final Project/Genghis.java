@@ -22,6 +22,25 @@ public class Genghis extends Actor
         // Add your action code here.
         fall();
         if (Greenfoot.isKeyDown("w") && getY() > getWorld().getHeight() - 50)jump();
+        
+         if (Greenfoot.isKeyDown("d")){
+            move(1);
+            if (isTouching(platform.class)){
+                move(-1);
+            }
+        }
+        if (Greenfoot.isKeyDown("a")){
+            move(-1);
+            if (isTouching(platform.class)){
+                move(1);
+            }
+        }
+        if (Greenfoot.isKeyDown("a")){
+            move(-1);
+            if (isTouching(platform.class)){
+                move(1);
+            }
+        }
     }
     public void fall(){
         setLocation(getX(), getY() + velocity);
@@ -30,13 +49,6 @@ public class Genghis extends Actor
     }
     public void jump(){
         velocity = -10;
-    }
-    public void move(){
-        int y = getY();
-        int x = getX();
-        if(Greenfoot.isKeyDown("a"))x--;
-        if(Greenfoot.isKeyDown("d"))x++;
-        setLocation(x, y);   
     }
     //if a key is pressed, shoot a projectile named horse
 }
