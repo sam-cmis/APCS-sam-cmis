@@ -33,7 +33,7 @@ public class Field extends World
         addObject(character4,752,554);
         Genghis genghis2 = new Genghis();
         addObject(genghis2,52,555);
-        platform platform = new platform();
+        platform platform = new platform(200, 25);
         addObject(platform, 450,400);
     }
 }

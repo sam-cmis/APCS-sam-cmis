@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon May 27 11:23:45 ICT 2019
+#Tue May 28 09:46:50 ICT 2019
 class.Communist.superclass=greenfoot.Actor
 project.charset=UTF-8
 class.Julius.image=juli.png
@@ -10,22 +10,25 @@ version=3.0.0
 class.Deathmatch.superclass=greenfoot.World
 class.platform.image=New Piskel.png
 class.Chandragupta.image=cg.png
-simulation.speed=55
+simulation.speed=60
 world.lastInstantiated=Field
 class.Gupta.superclass=greenfoot.Actor
 class.Communist1.superclass=greenfoot.Actor
+class.fire.superclass=greenfoot.Actor
 class.Field.superclass=greenfoot.World
 class.Boss.image=220px-Mao_Zedong_1963_(cropped).jpg
 mainWindow.y=40
 mainWindow.x=40
 class.Genghis.superclass=greenfoot.Actor
 class.Julius.superclass=greenfoot.Actor
-class.Deathmatch.image=rAxpesr.jpg
 class.Stalin.image=staline.png
+class.Deathmatch.image=rAxpesr.jpg
 class.Field.image=flat.jpg
 class.platform.superclass=greenfoot.Actor
 mainWindow.width=850
 class.Chandragupta.superclass=greenfoot.Actor
+class.horse.superclass=greenfoot.Actor
 class.Stalin.superclass=greenfoot.Actor
 class.Ashoka.superclass=greenfoot.Actor
+class.skills.superclass=greenfoot.Actor
 class.Boss.superclass=greenfoot.Actor
