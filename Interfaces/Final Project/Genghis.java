@@ -13,6 +13,7 @@ public class Genghis extends Actor
     public Genghis(){
         velocity = 0;
     }
+
     /**
      * Act - do whatever the Character wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -20,10 +21,12 @@ public class Genghis extends Actor
     public void act() 
     {
         // Add your action code here.
+
+
         fall();
         if (Greenfoot.isKeyDown("w") && isOnSolidGround())jump();
-        
-         if (Greenfoot.isKeyDown("d")){
+
+        if (Greenfoot.isKeyDown("d")){
             move(1);
             if (isTouching(platform.class))
             {
@@ -37,7 +40,21 @@ public class Genghis extends Actor
                 move(-1);
             }
         }
+        if (Greenfoot.isKeyDown("f")){
+            setRotation (getRotation()-1);
+            
+        }
+        if (Greenfoot.isKeyDown("g")){
+            setRotation (getRotation()+1);
+            
+        }
+        String t= "p";
+        if ("t".equals(Greenfoot.getKey())){
+            System.out.println("works");
+            fire();
+        }
     }
+
     public void fall(){
         setLocation(getX(), getY() + velocity);
         if (isOnSolidGround())
@@ -45,22 +62,29 @@ public class Genghis extends Actor
             velocity = 0;
         }
         else velocity += GRAVITY;
-        
+
     }
+
     public void jump(){
         velocity = -25;
     }
+
     public boolean isOnSolidGround(){
         boolean isOnGround = false;
-        
+
         if (getY() > getWorld().getHeight() - 70) isOnGround = true;
-        
+
         int imageWidth = getImage().getWidth();
         int imageHeight = getImage().getHeight();
         if(getOneObjectAtOffset(imageWidth / -2, imageHeight / 2, platform.class) != null || 
         getOneObjectAtOffset(imageWidth / 2, imageHeight / 2, platform.class) != null ) isOnGround = true;
         return isOnGround;
     }
-     
-    //if a key is pressed, shoot a projectile named horse
+
+    public void fire(){
+        horse horses = new horse();
+        getWorld().addObject(horses, getX(),getY());
+        horses.setRotation(getRotation());
+        horses.move(30);
+    }
 }

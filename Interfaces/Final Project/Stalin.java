@@ -1,26 +1,83 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
- * Write a description of class Character3 here.
+ * Write a description of class Character here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class Stalin extends Actor
 {
+    private final int GRAVITY = 1;
+    private int velocity;
+    public Stalin(){
+        velocity = 0;
+    }
+
     /**
-     * Act - do whatever the Character3 wants to do. This method is called whenever
+     * Act - do whatever the Character wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
         // Add your action code here.
-        int y = getY();
-        int x = getX();
-        if(Greenfoot.isKeyDown("5"))y++;
-        if(Greenfoot.isKeyDown("8"))y--;
-        if(Greenfoot.isKeyDown("4"))x--;
-        if(Greenfoot.isKeyDown("6"))x++;
-        setLocation(x, y); 
-    }    
-    //if a key is pressed, shoot a projectile named communism
+        fall();
+        if (Greenfoot.isKeyDown("i") && isOnSolidGround())jump();
+
+        if (Greenfoot.isKeyDown("l")){
+            move(1);
+            if (isTouching(platform.class))
+            {
+                move(1);
+            }
+            if ("o".equals(Greenfoot.getKey())){
+                fire();
+            }
+        }
+        if (Greenfoot.isKeyDown("j")){
+            move(-1);
+            if (isTouching(platform.class))
+            {
+                move(-1);
+            }
+            if ("o".equals(Greenfoot.getKey())){
+                fire();
+            }
+        }
+        if ("o".equals(Greenfoot.getKey())){
+            fire();
+        }
+    }
+
+    public void fall(){
+        setLocation(getX(), getY() + velocity);
+        if (isOnSolidGround())
+        {
+            velocity = 0;
+        }
+        else velocity += GRAVITY;
+
+    }
+
+    public void jump(){
+        velocity = -25;
+    }
+
+    public boolean isOnSolidGround(){
+        boolean isOnGround = false;
+
+        if (getY() > getWorld().getHeight() - 70) isOnGround = true;
+
+        int imageWidth = getImage().getWidth();
+        int imageHeight = getImage().getHeight();
+        if(getOneObjectAtOffset(imageWidth / -2, imageHeight / 2, platform.class) != null || 
+        getOneObjectAtOffset(imageWidth / 2, imageHeight / 2, platform.class) != null ) isOnGround = true;
+        return isOnGround;
+    }
+
+    public void fire(){
+        Fiveyr fiveyr = new Fiveyr();
+        getWorld().addObject(fiveyr, getX(),getY());
+    }
+  
 }

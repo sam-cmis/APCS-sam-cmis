@@ -1,7 +1,7 @@
 import greenfoot.*;  
-public class horse extends skills
+public class Fiveyr extends skills
 {
-    private int life = 100;
+    private int life = 10;
     
     public void act() 
     {
@@ -11,6 +11,6 @@ public class horse extends skills
             getWorld().removeObject(this); 
         }
         
-        move(3);
+        move(30);
     }    
 }

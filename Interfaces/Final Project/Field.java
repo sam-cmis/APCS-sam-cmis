@@ -29,8 +29,6 @@ public class Field extends World
     {
         Chandragupta character2 = new Chandragupta();
         addObject(character2,386,58);
-        Julius character4 = new Julius();
-        addObject(character4,752,554);
         Genghis genghis2 = new Genghis();
         addObject(genghis2,52,555);
         platform platform = new platform(200, 25);

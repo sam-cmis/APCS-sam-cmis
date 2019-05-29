@@ -1,19 +1,16 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Gupta here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Ashoka extends Actor
+import greenfoot.*;  
+public class Ashoka extends skills
 {
-    /**
-     * Act - do whatever the Gupta wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private int life = 10;
+    
     public void act() 
     {
-        // Add your action code here.
+        life--; 
+        if (life == 0){
+            getWorld().addObject(new Splash(),getX(),getY());
+            getWorld().removeObject(this); 
+        }
+        
+        move(-30);
     }    
 }
