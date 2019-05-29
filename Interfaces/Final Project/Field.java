@@ -28,10 +28,36 @@ public class Field extends World
     private void prepare()
     {
         Chandragupta character2 = new Chandragupta();
-        addObject(character2,386,58);
+        addObject(character2,735,463);
         Genghis genghis2 = new Genghis();
-        addObject(genghis2,52,555);
-        platform platform = new platform(200, 25);
-        addObject(platform, 450,400);
+        addObject(genghis2,39,470);
+        platform platform2 = new platform();
+        addObject(platform2,127,285);
+        platform2.setLocation(139,289);
+        platform platform3 = new platform();
+        addObject(platform3,79,289);
+        platform3.setLocation(75,289);
+        platform platform4 = new platform();
+        addObject(platform4,19,288);
+        platform4.setLocation(11,289);
+        platform platform5 = new platform();
+        addObject(platform5,535,554);
+        platform5.setLocation(522,543);
+        platform platform6 = new platform();
+        addObject(platform6,719,556);
+        platform6.setLocation(715,545);
+        platform platform7 = new platform();
+        addObject(platform7,468,564);
+        platform7.setLocation(458,598);
+        platform platform8 = new platform();
+        addObject(platform8,728,377);
+        platform8.setLocation(780,591);
+        platform platform9 = new platform();
+        addObject(platform9,95,540);
+    
+        platform platform10 = new platform();
+        addObject(platform10,27,546);
+        
+        
     }
 }

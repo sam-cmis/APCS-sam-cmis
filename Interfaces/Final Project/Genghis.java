@@ -10,6 +10,8 @@ public class Genghis extends Actor
 {
     private final int GRAVITY = 1;
     private int velocity;
+    private int mana;
+    private int cooltime = 1;
     public Genghis(){
         velocity = 0;
     }
@@ -21,7 +23,6 @@ public class Genghis extends Actor
     public void act() 
     {
         // Add your action code here.
-
 
         fall();
         if (Greenfoot.isKeyDown("w") && isOnSolidGround())jump();
@@ -47,12 +48,14 @@ public class Genghis extends Actor
         if (Greenfoot.isKeyDown("g")){
             setRotation (getRotation()+1);
             
-        }
-        String t= "p";
-        if ("t".equals(Greenfoot.getKey())){
-            System.out.println("works");
+        }  
+        if  (Greenfoot.isKeyDown("e") && mana > 5){
+          
             fire();
+            mana = 0;
         }
+        mana++;
+        //you have 50 bullets
     }
 
     public void fall(){

@@ -1,5 +1,6 @@
 #Greenfoot properties
-#Wed May 29 11:12:39 ICT 2019
+#Wed May 29 11:40:15 ICT 2019
+class.Splash.image=button-red.png
 project.charset=UTF-8
 class.horse.image=alligator.png
 mainWindow.height=600
@@ -9,7 +10,7 @@ version=3.0.0
 class.Deathmatch.superclass=greenfoot.World
 class.platform.image=New Piskel.png
 class.Chandragupta.image=cg.png
-simulation.speed=60
+simulation.speed=43
 world.lastInstantiated=Field
 class.Gupta.superclass=greenfoot.Actor
 class.Communist1.superclass=greenfoot.Actor
@@ -22,7 +23,7 @@ mainWindow.x=40
 class.Genghis.superclass=greenfoot.Actor
 class.Deathmatch.image=rAxpesr.jpg
 class.Stalin.image=staline.png
-class.Field.image=flat.jpg
+class.Field.image=1_c8wiw6UsCLuJ2KJE2rTxLQ.png
 class.platform.superclass=greenfoot.Actor
 mainWindow.width=850
 class.Chandragupta.superclass=greenfoot.Actor
