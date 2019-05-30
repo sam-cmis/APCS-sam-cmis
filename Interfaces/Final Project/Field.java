@@ -28,36 +28,60 @@ public class Field extends World
     private void prepare()
     {
         Chandragupta character2 = new Chandragupta();
-        addObject(character2,735,463);
+        addObject(character2,746,448);
         Genghis genghis2 = new Genghis();
-        addObject(genghis2,39,470);
-        platform platform2 = new platform();
-        addObject(platform2,127,285);
-        platform2.setLocation(139,289);
-        platform platform3 = new platform();
-        addObject(platform3,79,289);
-        platform3.setLocation(75,289);
-        platform platform4 = new platform();
-        addObject(platform4,19,288);
-        platform4.setLocation(11,289);
-        platform platform5 = new platform();
-        addObject(platform5,535,554);
-        platform5.setLocation(522,543);
-        platform platform6 = new platform();
-        addObject(platform6,719,556);
-        platform6.setLocation(715,545);
-        platform platform7 = new platform();
-        addObject(platform7,468,564);
-        platform7.setLocation(458,598);
-        platform platform8 = new platform();
-        addObject(platform8,728,377);
-        platform8.setLocation(780,591);
-        platform platform9 = new platform();
-        addObject(platform9,95,540);
-    
-        platform platform10 = new platform();
-        addObject(platform10,27,546);
-        
-        
+        addObject(genghis2,45,453);
+        Platform platform = new Platform();
+        addObject(platform, 12, 289);
+        Platform platform2 = new Platform();
+        addObject(platform2, 74, 289);
+        Platform platform3 = new Platform();
+        addObject(platform3, 139, 289);
+        Platform platform4 = new Platform();
+        addObject(platform4, 11, 589);
+        Platform platform5 = new Platform();
+        addObject(platform5, 75, 589);//
+        Platform platform6 = new Platform();
+        addObject(platform6, 523, 526);////
+        Platform platform7 = new Platform();
+        addObject(platform7, 459, 589);//hi
+        Platform platform8 = new Platform();
+        addObject(platform8, 139, 589);
+        Platform platform9 = new Platform();
+        addObject(platform9, 203, 589);
+        Platform platform10 = new Platform();
+        addObject(platform10, 587, 589);
+        Platform platform11 = new Platform();
+        addObject(platform11, 651, 589);
+        Platform platform12 = new Platform();
+        addObject(platform12, 267, 589);
+        Platform platform13 = new Platform();
+        addObject(platform13, 331, 589);//this
+        Platform platform14 = new Platform();
+        addObject(platform14, 395, 589);//that
+        Platform platform15 = new Platform();
+        addObject(platform15, 715, 589);
+        Platform platform16 = new Platform();
+        addObject(platform16, 779, 589);
+        Platform platform17 = new Platform();
+        addObject(platform17, 31, 225);
+        Platform platform18 = new Platform();
+        addObject(platform18, 523, 589);
+        Platform platform19 = new Platform();
+        addObject(platform19, 587, 589);
+        Platform platform20 = new Platform();
+        addObject(platform20, 523, 225);///////
+        Platform platform21 = new Platform();
+        addObject(platform21, 523, 589);
+        Platform platform22 = new Platform();
+        addObject(platform22, 459, 526);
+        Platform platform23 = new Platform();
+        addObject(platform23, 395, 526);
+        Platform platform25 = new Platform();
+        addObject(platform25, 587, 225);
+        Platform platform26 = new Platform();
+        addObject(platform26, 267, 417);
+        Platform platform27 = new Platform();
+        addObject(platform27, 715, 353);
     }
 }

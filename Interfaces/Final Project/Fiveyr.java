@@ -7,7 +7,7 @@ public class Fiveyr extends skills
     {
         life--; 
         if (life == 0){
-            getWorld().addObject(new Splash(),getX(),getY());
+            getWorld().addObject(new Bomb(),getX(),getY());
             getWorld().removeObject(this); 
         }
         

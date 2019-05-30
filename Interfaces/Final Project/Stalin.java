@@ -26,7 +26,7 @@ public class Stalin extends Actor
 
         if (Greenfoot.isKeyDown("l")){
             move(1);
-            if (isTouching(platform.class))
+            if (isTouching(Platform.class))
             {
                 move(1);
             }
@@ -36,7 +36,7 @@ public class Stalin extends Actor
         }
         if (Greenfoot.isKeyDown("j")){
             move(-1);
-            if (isTouching(platform.class))
+            if (isTouching(Platform.class))
             {
                 move(-1);
             }
@@ -70,8 +70,8 @@ public class Stalin extends Actor
 
         int imageWidth = getImage().getWidth();
         int imageHeight = getImage().getHeight();
-        if(getOneObjectAtOffset(imageWidth / -2, imageHeight / 2, platform.class) != null || 
-        getOneObjectAtOffset(imageWidth / 2, imageHeight / 2, platform.class) != null ) isOnGround = true;
+        if(getOneObjectAtOffset(imageWidth / -2, imageHeight / 2, Platform.class) != null || 
+        getOneObjectAtOffset(imageWidth / 2, imageHeight / 2, Platform.class) != null ) isOnGround = true;
         return isOnGround;
     }
 

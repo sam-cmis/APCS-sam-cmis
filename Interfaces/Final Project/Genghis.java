@@ -22,40 +22,40 @@ public class Genghis extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-
         fall();
         if (Greenfoot.isKeyDown("w") && isOnSolidGround())jump();
 
         if (Greenfoot.isKeyDown("d")){
             move(1);
-            if (isTouching(platform.class))
-            {
-                move(1);
-            }
-        }
-        if (Greenfoot.isKeyDown("a")){
-            move(-1);
-            if (isTouching(platform.class))
+            if (hitPlatformR())
             {
                 move(-1);
             }
         }
+        if (Greenfoot.isKeyDown("a")){
+            move(-1);
+            if (hitPlatformL())
+            {
+                move(1);
+            }
+        }
         if (Greenfoot.isKeyDown("f")){
             setRotation (getRotation()-1);
-            
+
         }
         if (Greenfoot.isKeyDown("g")){
             setRotation (getRotation()+1);
-            
+
         }  
-        if  (Greenfoot.isKeyDown("e") && mana > 5){
-          
+        if  (Greenfoot.isKeyDown("e") && mana > 50){
+
             fire();
             mana = 0;
         }
         mana++;
-        //you have 50 bullets
+        getKilled();
+        hitPlatformL();
+        hitPlatformR();
     }
 
     public void fall(){
@@ -63,6 +63,7 @@ public class Genghis extends Actor
         if (isOnSolidGround())
         {
             velocity = 0;
+            
         }
         else velocity += GRAVITY;
 
@@ -79,8 +80,8 @@ public class Genghis extends Actor
 
         int imageWidth = getImage().getWidth();
         int imageHeight = getImage().getHeight();
-        if(getOneObjectAtOffset(imageWidth / -2, imageHeight / 2, platform.class) != null || 
-        getOneObjectAtOffset(imageWidth / 2, imageHeight / 2, platform.class) != null ) isOnGround = true;
+        if(getOneObjectAtOffset(imageWidth / -2, imageHeight / 2, Platform.class) != null || 
+        getOneObjectAtOffset(imageWidth / 2, imageHeight / 2, Platform.class) != null ) isOnGround = true;
         return isOnGround;
     }
 
@@ -89,5 +90,28 @@ public class Genghis extends Actor
         getWorld().addObject(horses, getX(),getY());
         horses.setRotation(getRotation());
         horses.move(30);
+    }
+
+    public void getKilled(){
+        if (isTouching(Bomb.class)){
+            getWorld().removeObject(this); 
+            Greenfoot.setWorld(new End()); 
+        }
+        if (isTouching(Splash.class)){
+            Death death = new Death();
+            getWorld().addObject(death, getX(), getY());
+            getWorld().removeObject(this);
+            Greenfoot.setWorld(new Deathmatch());
+        }
+    }
+
+    private boolean hitPlatformL(){
+        Actor hitL = getOneObjectAtOffset(-getImage().getWidth() / 2, 0, Platform.class);
+        return hitL != null;
+    }
+
+    private boolean hitPlatformR(){
+        Actor hitR = getOneObjectAtOffset(getImage().getWidth() / 2, 0, Platform.class);
+        return hitR != null;
     }
 }

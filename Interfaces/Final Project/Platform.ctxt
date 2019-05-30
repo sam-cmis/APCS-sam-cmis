@@ -1,10 +1,10 @@
 #BlueJ class context
-comment0.target=platform
+comment0.target=Platform
 comment0.text=\n\ Write\ a\ description\ of\ class\ platform\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=platform()
+comment1.target=Platform()
 comment2.params=width\ height
-comment2.target=platform(int,\ int)
+comment2.target=Platform(int,\ int)
 comment3.params=
 comment3.target=void\ act()
 comment3.text=\n\ Act\ -\ do\ whatever\ the\ platform\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n

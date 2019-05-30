@@ -6,12 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class platform extends Actor
+public class Platform extends Actor
 {
-    public platform() {
+    public Platform() {
         this(63, 63);
     }
-    public platform(int width, int height){
+    public Platform(int width, int height){
         GreenfootImage image = getImage();
         image.scale(width, height);
         setImage(image);

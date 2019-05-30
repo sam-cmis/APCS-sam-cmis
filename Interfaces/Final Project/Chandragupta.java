@@ -27,17 +27,17 @@ public class Chandragupta extends Actor
 
         if (Greenfoot.isKeyDown("right")){
             move(1);
-            if (isTouching(platform.class))
+             if (hitPlatformR())
             {
-                move(1);
+                move(-1);
             }
             
         }
         if (Greenfoot.isKeyDown("left")){
             move(-1);
-            if (isTouching(platform.class))
+           if (hitPlatformL())
             {
-                move(-1);
+                move(1);
             }
             
         }
@@ -52,6 +52,9 @@ public class Chandragupta extends Actor
         if ("space".equals(Greenfoot.getKey())){
             fire();
         }
+        getKilled();
+        hitPlatformL();
+        hitPlatformR();
     }
 
     public void fall(){
@@ -75,8 +78,8 @@ public class Chandragupta extends Actor
 
         int imageWidth = getImage().getWidth();
         int imageHeight = getImage().getHeight();
-        if(getOneObjectAtOffset(imageWidth / -2, imageHeight / 2, platform.class) != null || 
-        getOneObjectAtOffset(imageWidth / 2, imageHeight / 2, platform.class) != null ) isOnGround = true;
+        if(getOneObjectAtOffset(imageWidth / -2, imageHeight / 2, Platform.class) != null || 
+        getOneObjectAtOffset(imageWidth / 2, imageHeight / 2, Platform.class) != null ) isOnGround = true;
         return isOnGround;
     }
 
@@ -85,6 +88,27 @@ public class Chandragupta extends Actor
         getWorld().addObject(ashoka, getX(),getY());
         ashoka.setRotation(getRotation());
         ashoka.move(30);
+    }
+    
+    public void getKilled(){
+        if (isTouching(Bomb.class)){
+            getWorld().removeObject(this); 
+            Greenfoot.setWorld(new End()); 
+        }
+        if (isTouching(Splash.class)){
+            getWorld().removeObject(this);
+            Greenfoot.setWorld(new Deathmatch());
+        }
+    }
+
+    private boolean hitPlatformL(){
+        Actor hitL = getOneObjectAtOffset(-getImage().getWidth() / 2, 0, Platform.class);
+        return hitL != null;
+    }
+
+    private boolean hitPlatformR(){
+        Actor hitR = getOneObjectAtOffset(getImage().getWidth() / 2, 0, Platform.class);
+        return hitR != null;
     }
     //if a key is pressed, shoot a projectile named horse
 }
