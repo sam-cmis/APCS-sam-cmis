@@ -70,7 +70,7 @@ public class Genghis extends Actor
     }
 
     public void jump(){
-        velocity = -25;
+        velocity = -20;
     }
 
     public boolean isOnSolidGround(){

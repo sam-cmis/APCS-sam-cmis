@@ -47,6 +47,7 @@ public class Stalin extends Actor
         if ("o".equals(Greenfoot.getKey())){
             fire();
         }
+        getKilled();
     }
 
     public void fall(){
@@ -80,4 +81,12 @@ public class Stalin extends Actor
         getWorld().addObject(fiveyr, getX(),getY());
     }
   
+    public void getKilled(){
+        if (isTouching(Splash.class)){
+            Victory victory = new Victory();
+            
+            getWorld().removeObject(this);
+            Greenfoot.setWorld(new Victory());
+        }
+    }
 }

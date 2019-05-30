@@ -68,7 +68,7 @@ public class Chandragupta extends Actor
     }
 
     public void jump(){
-        velocity = -25;
+        velocity = -15;
     }
 
     public boolean isOnSolidGround(){

@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu May 30 09:44:09 ICT 2019
+#Thu May 30 12:10:25 ICT 2019
 class.horse.superclass=skills
 class.Stalin.image=staline.png
 class.Communist1.superclass=greenfoot.Actor
@@ -20,6 +20,7 @@ class.Boss.superclass=greenfoot.Actor
 class.Platform.image=New Piskel.png
 class.Genghis.image=genghis.png
 class.horse.image=camel.png
+class.Victory.superclass=greenfoot.World
 class.Death.image=skull.png
 mainWindow.width=850
 class.Splash.image=button-red.png
@@ -31,8 +32,9 @@ mainWindow.height=600
 mainWindow.x=40
 class.Platform.superclass=greenfoot.Actor
 class.Ashoka.image=ashokaa.png
+class.Victory.image=humanity.png
 class.Genghis.superclass=greenfoot.Actor
-world.lastInstantiated=Field
+world.lastInstantiated=Deathmatch
 class.Fiveyr.image=house-02.png
 version=3.0.0
 project.charset=UTF-8
