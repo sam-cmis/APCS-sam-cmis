@@ -6,14 +6,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Genghis extends Actor
+public class Genghis extends Actor implements Characters
 {
     private final int GRAVITY = 1;
     private int velocity;
     private int mana;
     private int cooltime = 1;
+    private int health;
+    private boolean winner;
+    
+    public void setHealth(int x)
+    {
+        health -= x;
+    }
+    
     public Genghis(){
         velocity = 0;
+        health = 100;
     }
 
     /**
@@ -53,9 +62,10 @@ public class Genghis extends Actor
             mana = 0;
         }
         mana++;
-        getKilled();
+        
         hitPlatformL();
         hitPlatformR();
+        getKilled();
     }
 
     public void fall(){
@@ -92,6 +102,26 @@ public class Genghis extends Actor
         horses.move(30);
     }
 
+    
+    public boolean getWinner(){
+        return winner;
+    }
+        
+    
+    private boolean hitPlatformL(){
+        Actor hitL = getOneObjectAtOffset(-getImage().getWidth() / 2, 0, Platform.class);
+        return hitL != null;
+    }
+
+    private boolean hitPlatformR(){
+        Actor hitR = getOneObjectAtOffset(getImage().getWidth() / 2, 0, Platform.class);
+        return hitR != null;
+    }
+    
+    public Characters getCharacter(){
+        return new Genghis();
+    }
+    
     public void getKilled(){
         if (isTouching(Bomb.class)){
             getWorld().removeObject(this); 
@@ -102,16 +132,7 @@ public class Genghis extends Actor
             getWorld().addObject(death, getX(), getY());
             getWorld().removeObject(this);
             Greenfoot.setWorld(new Deathmatch());
+            winner = false;
         }
-    }
-
-    private boolean hitPlatformL(){
-        Actor hitL = getOneObjectAtOffset(-getImage().getWidth() / 2, 0, Platform.class);
-        return hitL != null;
-    }
-
-    private boolean hitPlatformR(){
-        Actor hitR = getOneObjectAtOffset(getImage().getWidth() / 2, 0, Platform.class);
-        return hitR != null;
     }
 }

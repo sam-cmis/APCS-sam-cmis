@@ -6,12 +6,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Chandragupta extends Actor
+public class Chandragupta extends Actor implements Characters
 {
     private final int GRAVITY = 1;
     private int velocity;
+    private int health;
+    private boolean winner;
+    
+    public void setHealth(int x)
+    {
+        health -= x;
+    }
+    
     public Chandragupta(){
         velocity = 0;
+        health = 100;
     }
 
     /**
@@ -52,9 +61,10 @@ public class Chandragupta extends Actor
         if ("space".equals(Greenfoot.getKey())){
             fire();
         }
-        getKilled();
+        
         hitPlatformL();
         hitPlatformR();
+        getKilled();
     }
 
     public void fall(){
@@ -90,15 +100,10 @@ public class Chandragupta extends Actor
         ashoka.move(30);
     }
     
-    public void getKilled(){
-        if (isTouching(Bomb.class)){
-            getWorld().removeObject(this); 
-            Greenfoot.setWorld(new End()); 
-        }
-        if (isTouching(Splash.class)){
-            getWorld().removeObject(this);
-            Greenfoot.setWorld(new Deathmatch());
-        }
+
+    
+    public boolean getWinner(){
+        return winner;
     }
 
     private boolean hitPlatformL(){
@@ -110,5 +115,21 @@ public class Chandragupta extends Actor
         Actor hitR = getOneObjectAtOffset(getImage().getWidth() / 2, 0, Platform.class);
         return hitR != null;
     }
+    
+    public Characters getCharacter(){
+        return new Chandragupta();
+    }
     //if a key is pressed, shoot a projectile named horse
+    
+        public void getKilled(){
+        if (isTouching(Bomb.class)){
+            getWorld().removeObject(this); 
+            Greenfoot.setWorld(new End()); 
+        }
+        if (isTouching(Splash.class)){
+            getWorld().removeObject(this);
+            Greenfoot.setWorld(new Deathmatch());
+            winner = true;
+        }
+    }
 }

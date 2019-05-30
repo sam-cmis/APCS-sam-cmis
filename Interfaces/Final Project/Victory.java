@@ -16,10 +16,10 @@ public class Victory extends World
     public Victory()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1); 
+        super(650, 400, 1); 
         
         Genghis genghis = new Genghis();
-        addObject(genghis, 404, 420);
+        addObject(genghis, 305, 38);
        
     }
 }

@@ -17,7 +17,15 @@ public class Deathmatch extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
-
+        Chandragupta chandragupta = new Chandragupta();
+        Genghis genghis = new Genghis();
+        if (!chandragupta.getWinner()){
+            addObject(chandragupta,300,200);
+        }
+        else if(chandragupta.getWinner())
+        {
+            addObject(genghis,300,200);
+        }
         prepare();
     }
 
@@ -81,5 +89,6 @@ public class Deathmatch extends World
         addObject(platform26, 267, 417);
         Platform platform27 = new Platform();
         addObject(platform27, 715, 353);
+
     }
 }

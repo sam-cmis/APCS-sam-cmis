@@ -1,12 +1,12 @@
 #Greenfoot properties
-#Thu May 30 12:10:25 ICT 2019
+#Thu May 30 14:34:26 ICT 2019
 class.horse.superclass=skills
 class.Stalin.image=staline.png
 class.Communist1.superclass=greenfoot.Actor
 class.Gupta.superclass=greenfoot.Actor
 simulation.speed=61
 class.Chandragupta.image=cg.png
-class.End.image=825.jpg
+class.End.image=youdied1.png
 class.Deathmatch.superclass=greenfoot.World
 class.Bomb.superclass=greenfoot.Actor
 class.Death.superclass=greenfoot.Actor
@@ -14,6 +14,7 @@ class.Deathmatch.image=rAxpesr.jpg
 class.Splash.superclass=greenfoot.Actor
 class.End.superclass=greenfoot.World
 class.Field.image=1_c8wiw6UsCLuJ2KJE2rTxLQ.png
+class.Characters.superclass=
 class.Ashoka.superclass=skills
 class.Chandragupta.superclass=greenfoot.Actor
 class.Boss.superclass=greenfoot.Actor
@@ -24,6 +25,7 @@ class.Victory.superclass=greenfoot.World
 class.Death.image=skull.png
 mainWindow.width=850
 class.Splash.image=button-red.png
+class.Title.superclass=greenfoot.World
 class.Stalin.superclass=greenfoot.Actor
 mainWindow.y=40
 class.Field.superclass=greenfoot.World
@@ -31,11 +33,12 @@ class.Boss.image=220px-Mao_Zedong_1963_(cropped).jpg
 mainWindow.height=600
 mainWindow.x=40
 class.Platform.superclass=greenfoot.Actor
-class.Ashoka.image=ashokaa.png
-class.Victory.image=humanity.png
+class.Ashoka.image=smallshoka2.png
+class.Victory.image=ZOdKRs0-1.png
 class.Genghis.superclass=greenfoot.Actor
-world.lastInstantiated=Deathmatch
+world.lastInstantiated=Title
 class.Fiveyr.image=house-02.png
+class.Title.image=Super-Smash-Bros-rl5.png
 version=3.0.0
 project.charset=UTF-8
 class.skills.superclass=greenfoot.Actor

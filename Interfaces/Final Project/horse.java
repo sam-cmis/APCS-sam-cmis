@@ -1,7 +1,7 @@
 import greenfoot.*;  
 public class horse extends skills
 {
-    private int life = 100;
+    private int life = 50;
     
     public void act() 
     {

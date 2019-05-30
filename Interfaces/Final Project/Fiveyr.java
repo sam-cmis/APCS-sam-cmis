@@ -11,6 +11,6 @@ public class Fiveyr extends skills
             getWorld().removeObject(this); 
         }
         
-        move(30);
+        move(10);
     }    
 }
