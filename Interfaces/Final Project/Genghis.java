@@ -62,7 +62,7 @@ public class Genghis extends Actor implements Characters
             mana = 0;
         }
         mana++;
-        
+        damage();
         hitPlatformL();
         hitPlatformR();
         getKilled();
@@ -80,7 +80,7 @@ public class Genghis extends Actor implements Characters
     }
 
     public void jump(){
-        velocity = -20;
+        velocity = -15;
     }
 
     public boolean isOnSolidGround(){
@@ -122,17 +122,26 @@ public class Genghis extends Actor implements Characters
         return new Genghis();
     }
     
-    public void getKilled(){
-        if (isTouching(Bomb.class)){
-            getWorld().removeObject(this); 
-            Greenfoot.setWorld(new End()); 
-        }
+    public void damage(){
         if (isTouching(Splash.class)){
+            setHealth(100);
+        }
+        if (isTouching(Stalin.class)){
+            setHealth(100);
+        }
+    }
+    public void getKilled(){
+        
+        if (health == 0 && !isTouching(Stalin.class)){
             Death death = new Death();
             getWorld().addObject(death, getX(), getY());
             getWorld().removeObject(this);
             Greenfoot.setWorld(new Deathmatch());
             winner = false;
+        }
+        else if (health == 0 && isTouching(Stalin.class)){
+            getWorld().removeObject(this); 
+            Greenfoot.setWorld(new End()); 
         }
     }
 }

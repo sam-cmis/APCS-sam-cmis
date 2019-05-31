@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Field extends World
 {
+    Genghis genghis;
+    Chandragupta chandragupta;
+    private int Gravity = 1;
     /**
      * Constructor for objects of class finalproject.
      * 
@@ -17,7 +20,6 @@ public class Field extends World
 
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
-
         prepare();
     }
 
@@ -27,10 +29,10 @@ public class Field extends World
      */
     private void prepare()
     {
-        Chandragupta character2 = new Chandragupta();
-        addObject(character2,746,448);
-        Genghis genghis2 = new Genghis();
-        addObject(genghis2,45,453);
+        chandragupta = new Chandragupta();
+        addObject(chandragupta,746,448);
+        genghis = new Genghis();
+        addObject(genghis,45,453);
         Platform platform = new Platform();
         addObject(platform, 12, 289);
         Platform platform2 = new Platform();
@@ -83,5 +85,14 @@ public class Field extends World
         addObject(platform26, 267, 417);
         Platform platform27 = new Platform();
         addObject(platform27, 715, 353);
+    }
+    public Genghis getGenghis(){
+        return genghis;
+    }
+    public Chandragupta getChandragupta(){
+        return chandragupta;
+    }
+    public void setGravity(int Gravity){
+        this.Gravity = Gravity;
     }
 }

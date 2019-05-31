@@ -6,20 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Stalin extends Actor implements Characters
+public class Stalin extends Actor
 {
     private final int GRAVITY = 1;
     private int velocity;
-    private int health;
-    
-    public void setHealth(int x)
-    {
-        health -= x;
-    }
-    
     public Stalin(){
         velocity = 0;
-        health = 500;
     }
 
     /**
@@ -88,17 +80,13 @@ public class Stalin extends Actor implements Characters
         Fiveyr fiveyr = new Fiveyr();
         getWorld().addObject(fiveyr, getX(),getY());
     }
-  
+
     public void getKilled(){
         if (isTouching(Splash.class)){
-            Victory victory = new Victory();
-            
+            Death death = new Death();
+            getWorld().addObject(death, getX(), getY());
             getWorld().removeObject(this);
             Greenfoot.setWorld(new Victory());
         }
-    }
-    
-    public Characters getCharacter(){
-        return new Stalin();
     }
 }

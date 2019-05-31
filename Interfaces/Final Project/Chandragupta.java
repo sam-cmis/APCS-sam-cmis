@@ -10,58 +10,63 @@ public class Chandragupta extends Actor implements Characters
 {
     private final int GRAVITY = 1;
     private int velocity;
+    private int mana;
+    private int cooltime = 1;
     private int health;
     private boolean winner;
-    
+
+    public int getHealth(){
+        return health;
+    }
+
     public void setHealth(int x)
     {
         health -= x;
     }
-    
+
     public Chandragupta(){
         velocity = 0;
         health = 100;
     }
 
+    
+    
     /**
      * Act - do whatever the Character wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
-
         fall();
         if (Greenfoot.isKeyDown("up") && isOnSolidGround())jump();
 
         if (Greenfoot.isKeyDown("right")){
             move(1);
-             if (hitPlatformR())
+            if (hitPlatformR())
             {
                 move(-1);
             }
-            
         }
         if (Greenfoot.isKeyDown("left")){
             move(-1);
-           if (hitPlatformL())
+            if (hitPlatformL())
             {
                 move(1);
             }
-            
         }
         if (Greenfoot.isKeyDown(",")){
             setRotation (getRotation()-1);
-            
+
         }
         if (Greenfoot.isKeyDown(".")){
             setRotation (getRotation()+1);
-            
-        }
-        if ("space".equals(Greenfoot.getKey())){
+
+        }  
+        if  (Greenfoot.isKeyDown("space")){
+
             fire();
         }
-        
+        damage();
         hitPlatformL();
         hitPlatformR();
         getKilled();
@@ -72,6 +77,7 @@ public class Chandragupta extends Actor implements Characters
         if (isOnSolidGround())
         {
             velocity = 0;
+
         }
         else velocity += GRAVITY;
 
@@ -99,9 +105,7 @@ public class Chandragupta extends Actor implements Characters
         ashoka.setRotation(getRotation());
         ashoka.move(30);
     }
-    
 
-    
     public boolean getWinner(){
         return winner;
     }
@@ -115,21 +119,33 @@ public class Chandragupta extends Actor implements Characters
         Actor hitR = getOneObjectAtOffset(getImage().getWidth() / 2, 0, Platform.class);
         return hitR != null;
     }
-    
+
     public Characters getCharacter(){
         return new Chandragupta();
     }
-    //if a key is pressed, shoot a projectile named horse
+
+    public void damage(){
+        if (isTouching(Splash.class)){
+            setHealth(100);
+        }
+        if (isTouching(Stalin.class)){
+            setHealth(100);
+        }
+    }
     
-        public void getKilled(){
-        if (isTouching(Bomb.class)){
+    public void getKilled(){
+        if (health == 0 && !isTouching(Stalin.class)){
+            Death death = new Death();
+            getWorld().addObject(death, getX(), getY());
+            getWorld().removeObject(this);
+            Greenfoot.setWorld(new Deathmatch2());
+            winner = false;
+        }
+        else if (health == 0 && isTouching(Stalin.class)){
             getWorld().removeObject(this); 
             Greenfoot.setWorld(new End()); 
         }
-        if (isTouching(Splash.class)){
-            getWorld().removeObject(this);
-            Greenfoot.setWorld(new Deathmatch());
-            winner = true;
-        }
+
+        
     }
 }
